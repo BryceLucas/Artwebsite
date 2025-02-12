@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Registration - Art Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
 </head>
 <body>
     <header>
         <h1>Art Store</h1>
         <nav>
+            <!-- Navigation links to different sections of the site -->
             <a href="index.html">Home</a>
             <a href="#">About Us</a>
             <a href="#">Art Works</a>
@@ -20,44 +21,59 @@
     <main>
         <h2>Customer Registration</h2>
 
+        <!-- Registration form, submits data to 'submit_registration.php' using POST method -->
         <form action="submit_registration.php" method="post">
-            <!-- 1. User Info -->
+            
+            <!-- 1. User Info Section -->
             <fieldset>
                 <legend>1. User Info</legend>
+                
+                <!-- First Name -->
                 <label for="first-name">First Name:</label>
                 <input type="text" id="first-name" name="first_name" required>
 
+                <!-- Last Name -->
                 <label for="last-name">Last Name:</label>
                 <input type="text" id="last-name" name="last_name" required>
 
+                <!-- Email with a placeholder to guide format -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="format for email is xxx@yyy.zzz" required>
 
+                <!-- Password with minimum length requirement -->
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" minlength="8" required>
 
+                <!-- Confirm Password field -->
                 <label for="password-repeat">Password Repeat:</label>
                 <input type="password" id="password-repeat" name="password_repeat" minlength="8" required>
             </fieldset>
 
-            <!-- 2. Location -->
+            <!-- 2. Location Section -->
             <fieldset>
                 <legend>2. Location</legend>
+                
+                <!-- Address -->
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" required>
 
+                <!-- City -->
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city" required>
 
+                <!-- State -->
                 <label for="state">State:</label>
                 <input type="text" id="state" name="state" required>
 
+                <!-- ZIP Code -->
                 <label for="zip">Zip:</label>
                 <input type="text" id="zip" name="zip" required>
 
+                <!-- Phone Number with a format hint -->
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone" name="phone" placeholder="NNN-NNN-NNNN" required>
 
+                <!-- Dropdown menu for country selection -->
                 <label for="country">Country:</label>
                 <select id="country" name="country">
                     <option value="Canada" selected>Canada</option>
@@ -68,6 +84,7 @@
                     <option value="China">China</option>
                 </select>
 
+                <!-- Radio buttons for selecting continent -->
                 <label>Continent:</label>
                 <input type="radio" id="north-america" name="continent" value="North America">
                 <label for="north-america">North America</label>
@@ -79,27 +96,34 @@
                 <label for="south-america">South America</label>
             </fieldset>
 
-            <!-- 3. Personal Details -->
+            <!-- 3. Personal Details Section -->
             <fieldset>
                 <legend>3. Personal Details</legend>
+                
+                <!-- Date of Birth -->
                 <label for="birth-date">Birth Day:</label>
                 <input type="date" id="birth-date" name="birth_date">
 
+                <!-- Favorite Color Picker -->
                 <label for="fav-color">Favorite Color:</label>
                 <input type="color" id="fav-color" name="favorite_color">
 
+                <!-- Interest in Art slider -->
                 <label for="interest">Interest in Art:</label>
                 <input type="range" id="interest" name="interest" min="0" max="10">
                 <span>Minimal</span>
                 <span>Love it!</span>
             </fieldset>
 
-            <!-- 4. Agreement & Submission -->
+            <!-- 4. Agreement & Submission Section -->
             <fieldset>
                 <legend>4. All Done</legend>
+                
+                <!-- Terms and Conditions checkbox (required for submission) -->
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">I agree to the <a href="#">Terms of the Site</a></label>
 
+                <!-- Submit Button -->
                 <button type="submit">✔ Sign me up!</button>
             </fieldset>
         </form>
